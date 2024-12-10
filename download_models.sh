@@ -5,17 +5,18 @@ mkdir -p /workspace/facefusion/.assets/models
 
 # 函数用于检查文件是否存在
 check_and_download() {
-    file_path="$1"
+    file_path="/workspace/facefusion/.assets/models/$1"
     url="$2"
-    if [ ! -f "$file_path" ]; then
+    if [ -f "$file_path" ]; then
+        echo "File $file_path already exists, skipping download."
+    else
         echo "Downloading $url to $file_path"
         wget -P /workspace/facefusion/.assets/models "$url"
-    else
-        echo "File $file_path already exists, skipping download."
     fi
 }
 
 # 下载并保存模型文件
+# 确保这里的文件名与实际下载的文件名匹配
 check_and_download "arcface_converter_hififace.hash" https://ghp.ci/https://github.com/facefusion/facefusion-assets/releases/download/models-3.1.0/arcface_converter_hififace.hash
 check_and_download "arcface_converter_hififace.onnx" https://ghp.ci/https://github.com/facefusion/facefusion-assets/releases/download/models-3.1.0/arcface_converter_hififace.onnx
 check_and_download "hififace_unofficial_256.hash" https://ghp.ci/https://github.com/facefusion/facefusion-assets/releases/download/models-3.1.0/hififace_unofficial_256.hash
