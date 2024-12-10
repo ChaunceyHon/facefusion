@@ -1,0 +1,136 @@
+apt update
+
+apt upgrade
+
+apt dist-upgrade
+
+apt install update-manager-core
+
+do-release-upgrade -c
+
+apt install libcudnn8 libcudnn8-dev libnccl-dev libnccl2
+
+apt update
+
+apt full-upgrade
+
+do-release-upgrade
+
+关机重启
+
+lsb_release -a
+
+uname -r
+
+apt install --reinstall ubuntu-advantage-tools
+
+apt-cache policy libffi8
+
+apt-get install libffi8
+
+apt install --reinstall libffi-dev
+
+apt search libglib2.0
+
+apt install --reinstall libglib2.0-0
+
+ldd /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+
+apt install --reinstall libcaca0
+
+apt install --reinstall libtinfo6 libncursesw6
+
+conda init --all
+
+conda create --name facefusion python=3.12
+
+conda activate facefusion
+
+conda install conda-forge::cuda-runtime=12.4.1 conda-forge::cudnn=9.2.1.18
+
+pip install tensorrt==10.6.0 --extra-index-url https://pypi.nvidia.com
+
+git clone https://github.com/ChaunceyHon/facefusion
+
+cd facefusion
+
+pip install -r requirements.txt
+
+pip list
+
+python install.py --onnxruntime cuda
+
+pip list
+
+conda deactivate
+
+conda activate facefusion
+
+conda install libffi
+
+conda install conda-forge::p11-kit
+
+conda list p11-kit
+
+conda update p11-kit
+
+apt-get install libffi-dev
+
+apt-get install libgl1-mesa-glx
+
+
+apt-get update
+
+apt-get install curl
+
+apt install ffmpeg
+
+python facefusion.py run --open-browser
+
+apt-get install dos2unix
+
+dos2unix download_models.sh
+
+chmod +x download_models.sh
+
+./download_models.sh
+
+whoami
+
+curl ifconfig.me
+
+pip install colorama
+
+curl -sL https://deb.nodesource.com/setup_18.x | bash -
+
+apt-get install -y nodejs
+
+node -v
+npm -v
+
+npm config set registry https://registry.npm.taobao.org
+
+curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null
+
+echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list
+
+apt update
+
+apt install ngrok
+
+ngrok config add-authtoken 2VwYlPNaWWZM2xjCKpcdpxveU6X_5YER6JG9owLUCX2PExUcS
+
+chmod +x /usr/local/bin/ngrok
+
+ngrok version
+
+apt update
+
+python localtunnel.py
+
+python localtunnel.py --log-level debug
+
+conda activate facefusion
+
+cd facefusion
+
